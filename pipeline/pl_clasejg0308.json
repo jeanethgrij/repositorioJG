@@ -6,13 +6,21 @@
 				"name": "espar",
 				"type": "SetVariable",
 				"dependsOn": [],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": ""
+				}
 			}
 		],
 		"parameters": {
 			"numanalizar": {
 				"type": "int",
 				"defaultValue": 0
+			}
+		},
+		"variables": {
+			"espar": {
+				"type": "Boolean"
 			}
 		},
 		"annotations": []
