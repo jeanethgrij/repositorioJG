@@ -1,6 +1,17 @@
 {
 	"name": "pl_factorial",
 	"properties": {
+		"variables": {
+			"factorial": {
+				"type": "String"
+			},
+			"aux": {
+				"type": "String"
+			},
+			"rangelist": {
+				"type": "Array"
+			}
+		},
 		"annotations": []
 	}
 }
