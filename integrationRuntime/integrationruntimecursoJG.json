@@ -1,0 +1,7 @@
+{
+	"name": "integrationruntimecursoJG",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "local"
+	}
+}
