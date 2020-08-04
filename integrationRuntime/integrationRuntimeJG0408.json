@@ -1,0 +1,7 @@
+{
+	"name": "integrationRuntimeJG0408",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "integration run time Jeaneth"
+	}
+}
