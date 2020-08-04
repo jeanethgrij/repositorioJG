@@ -1,0 +1,20 @@
+{
+	"name": "pl_clasejg0308",
+	"properties": {
+		"activities": [
+			{
+				"name": "espar",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": []
+			}
+		],
+		"parameters": {
+			"numanalizar": {
+				"type": "int",
+				"defaultValue": 0
+			}
+		},
+		"annotations": []
+	}
+}
