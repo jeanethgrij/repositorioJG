@@ -1,6 +1,76 @@
 {
 	"name": "pl_factorial",
 	"properties": {
+		"activities": [
+			{
+				"name": "factorial",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "rangelist",
+					"value": {
+						"value": "@range(1,variables('numanalizar'))",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "factorial",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@variables('rangelist')",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "multiplicar",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "aux",
+								"value": {
+									"value": "@strig(mul(int(variables('factorial')),item()))",
+									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "Set variable1",
+							"type": "SetVariable",
+							"dependsOn": [
+								{
+									"activity": "multiplicar",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "factorial",
+								"value": {
+									"value": "@variables('aux')",
+									"type": "Expression"
+								}
+							}
+						}
+					]
+				}
+			}
+		],
 		"variables": {
 			"factorial": {
 				"type": "String"
@@ -10,6 +80,9 @@
 			},
 			"rangelist": {
 				"type": "Array"
+			},
+			"numanalizar": {
+				"type": "String"
 			}
 		},
 		"annotations": []
