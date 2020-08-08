@@ -1,0 +1,6 @@
+{
+	"name": "ir-test-jg",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
