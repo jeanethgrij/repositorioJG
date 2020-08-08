@@ -1,0 +1,7 @@
+{
+	"name": "runtimeJGcurso",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "local"
+	}
+}
